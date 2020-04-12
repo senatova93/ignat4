@@ -2,17 +2,22 @@ import React from 'react';
 
 class Header extends React.Component {
     state = {
-        error: false
+        error: false,
+        // title:"dddddd"
     }
     onKeyPress =  (e) => {
         if (e.key === "Enter") {
             this.onAddNameButtonClick()}
     }
+    // onTitleChanged = (e) => {
+    //     this.setState({title:e.currentTarget.value})
+    // }
 
     newNameTitleRef = React.createRef()
 
 
     onAddNameButtonClick = () => {
+       debugger
         let newText = this.newNameTitleRef.current.value
         this.newNameTitleRef.current.value = ""
         if (newText !==""){
@@ -25,12 +30,17 @@ class Header extends React.Component {
     render = () => {
 const inputClass = this.state.error ? "error" : ""
 
+
         return (
 
             <div className="header">
                 <h3 className="header__title">Entered Names</h3>
                 <div className="todoList-newTaskForm">
-                    <input onKeyPress={this.onKeyPress} className= {inputClass} type="text" placeholder="New  name" ref={this.newNameTitleRef}/>
+                    <input
+
+                           value = {this.state.title}
+                           onChange = {this.onTitleChanged}
+                           onKeyPress={this.onKeyPress} className= {inputClass} type="text" placeholder="New  name" ref={this.newNameTitleRef}/>
                     <button className="button" onClick={this.onAddNameButtonClick}>Add</button>
                 </div>
             </div>
