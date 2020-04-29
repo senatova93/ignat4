@@ -12,7 +12,7 @@ import state from "./state";
 class App extends React.Component {
     state = {
         names: [
-            {title: "oooo"},
+            {title: "Markusha"},
         ]
     }
     addName = (newText) => {

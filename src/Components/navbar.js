@@ -14,6 +14,7 @@ class Navbar extends React.Component {
             <nav className={s.nav}>
 
 
+
                 {!this.state.isHidden && <div>
                     <div className={s.item}>
                         <a href="/monday"> Monday</a>
@@ -37,9 +38,9 @@ class Navbar extends React.Component {
                         <a href="/sunday"> Sunday</a>
                     </div>
                 </div>}
-                {!this.state.isHidden && <button onClick={this.onShowFiltersClick}> Hide menu</button>}
-                {this.state.isHidden && <button onClick={this.onHideFiltersClick}> Show menu</button>}
 
+                 {!this.state.isHidden && <button className={s.cross} onClick={this.onShowFiltersClick}></button>}
+                {this.state.isHidden && <button className={s.burger} onClick={this.onHideFiltersClick}> </button>}
             </nav>
 
 

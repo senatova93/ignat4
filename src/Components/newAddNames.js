@@ -1,5 +1,7 @@
 import React from 'react';
 import NewAddName from "./newAddName";
+import s from './monday.module.css'
+
 
 class NewAddNames extends React.Component {
 
@@ -13,8 +15,8 @@ class NewAddNames extends React.Component {
 
 
         return (
-            <div className="Names">
-                <div className="name">
+            <div className= {s.names}>
+                <div className={s.name}>
                 {namesElements}
 
                 </div>
