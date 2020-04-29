@@ -6,7 +6,7 @@ class NewAddNames extends React.Component {
     render = (props) => {
 
         let namesElements = this.props.names.map((name) => {
-            debugger
+
             return <NewAddName
                 title={name.title}/>
         })

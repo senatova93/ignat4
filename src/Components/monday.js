@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './navbar.module.css';
+import s from './monday.module.css';
 import newAddName from "./newAddName";
 import Header from "./header";
 import NewAddNames from "./newAddNames";
 
 const Monday = (props) => {
 
-    return <div>
-        Monday
+    return <div className={s.monday}>
+
         <Header addName = {props.addName} />
         <NewAddNames names = {props.names}/>
 

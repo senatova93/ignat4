@@ -1,5 +1,5 @@
 import React from 'react';
-
+import s from './monday.module.css'
 class  newAddName extends React.Component {
 
   render = () => {

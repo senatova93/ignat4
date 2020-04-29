@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './monday.module.css'
 
 class Header extends React.Component {
     state = {
@@ -17,7 +18,7 @@ class Header extends React.Component {
 
 
     onAddNameButtonClick = () => {
-       debugger
+
         let newText = this.newNameTitleRef.current.value
         this.newNameTitleRef.current.value = ""
         if (newText !==""){
@@ -33,8 +34,8 @@ const inputClass = this.state.error ? "error" : ""
 
         return (
 
-            <div className="header">
-                <h3 className="header__title">Entered Names</h3>
+            <div className={s.header}>
+                <h3 className={s.headerTitle}>Entered Names</h3>
                 <div className="todoList-newTaskForm">
                     <input
 
