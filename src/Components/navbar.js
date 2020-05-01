@@ -5,17 +5,15 @@ import {NavLink} from "react-router-dom";
 
 class Navbar extends React.Component {
     state = {
-        isHidden: false,
-        filterValue: "nav",
         isMenu: false
     }
 
-    onShowFiltersClick = () => {
-        this.setState({isHidden: true})
-    }
-    onHideFiltersClick = () => {
-        this.setState({isHidden: false})
-    }
+    // onShowFiltersClick = () => {
+    //     this.setState({isHidden: true})
+    // }
+    // onHideFiltersClick = () => {
+    //     this.setState({isHidden: false})
+    // }
 
     toggleMenu = ()=> {
         this.setState({
@@ -24,15 +22,14 @@ class Navbar extends React.Component {
     }
 
     render = () => {
-        let classForMenu = this.state.isMenu ? s.menuIcon : s.menuIconActive + ' ' + s.menuIcon;
+
         let classForMenu1 = this.state.isMenu ? s.menuIconActive + ' ' + s.menuIcon : s.menuIcon ;
-        // let classForNav = this.state.filterValue === 'nav' ? 'nav':'navActive'
+
         return (
 
             <nav className={s.nav}>
-                {/*<button onClick={this.onFilterActive}></button>*/}
+
                 <div className={classForMenu1}
-                    // className= {s.menuIcon + ' ' + s.menuIconActive}
                     onClick={this.toggleMenu}></div>
 
                 {this.state.isMenu && <div>

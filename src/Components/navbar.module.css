@@ -2,28 +2,18 @@ a {
     text-decoration: none;
     font-size: x-large;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
+    color: #585858;
+}
+.nav {
+    transition: 10s;
 }
 .item {
     height: 30px;
     font-style: italic;
 
 }
-.burger {
-    margin: 20px;
-    width: 48px;
-    height: 48px;
-    background: url(https://icon-icons.com/icons2/1993/PNG/48/burger_line_list_menu_nav_navigation_option_icon_123231.png) no-repeat center;
-    background-size: contain;
 
-}
-
-.cross {
-    margin: 20px;
-    width: 48px;
-    height: 48px;
-    background: url(https://icon-icons.com/icons2/1157/PNG/32/1487086345-cross_81577.png) no-repeat center;
-}
 .menuIcon{
     margin: 30px;
     position: relative;
