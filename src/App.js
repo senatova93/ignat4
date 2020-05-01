@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header from "./Components/header";
-import NewAddNames from "./Components/newAddNames";
 import Navbar from "./Components/navbar";
 import Monday from "./Components/monday";
 import Tuesday from "./Components/tuesday";
-import Route from "react-router-dom/es/Route";
 
-import {BrowserRouter} from "react-router-dom";
-import state from "./state";
+import {BrowserRouter, Route} from "react-router-dom";
+
 class App extends React.Component {
     state = {
         names: [
