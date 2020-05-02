@@ -10,6 +10,7 @@ class NewAddNames extends React.Component {
         let namesElements = this.props.names.map((name) => {
 
             return <NewAddName
+
                 title={name.title}/>
         })
 

@@ -15,7 +15,7 @@ class Header extends React.Component {
         this.setState({title:e.currentTarget.value})
     }
 
-    newNameTitleRef = React.createRef()
+
 
 
     onAddNameButtonClick = () => {
@@ -42,8 +42,7 @@ const inputClass = this.state.error ? "error" : ""
                     <input value = {this.state.title}
                            onChange = {this.onTitleChanged}
                            onKeyPress={this.onKeyPress}
-                           className= {inputClass} type="text" placeholder= "New users name"
-                           ref={this.newNameTitleRef}/>
+                           className= {inputClass} type="text" placeholder= "New users name"/>
                     <button className="button" onClick={this.onAddNameButtonClick}>Add </button>
                 </div>
             </div>

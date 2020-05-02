@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './monday.module.css';
-import newAddName from "./newAddName";
 import Header from "./header";
 import NewAddNames from "./newAddNames";
 

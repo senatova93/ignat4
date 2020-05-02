@@ -34,25 +34,25 @@ class Navbar extends React.Component {
 
                 {this.state.isMenu && <div>
                     <div className={s.item}>
-                        <NavLink activeClassName = 'active' to= '/monday'> Monday</NavLink>
+                        <NavLink to= '/monday'> Monday</NavLink>
                     </div>
                     <div className={s.item}>
-                        <NavLink activeClassName = 'active' to = '/tuesday'> Tuesday</NavLink>
+                        <NavLink  to = '/tuesday'> Tuesday</NavLink>
                     </div>
                     <div className={s.item}>
-                        < NavLink activeClassName= 'active' to = "/wednesday"> Wednesday </NavLink>
+                        < NavLink to = "/wednesday"> Wednesday </NavLink>
                     </div>
                     <div className={s.item}>
-                        <NavLink activeClassName= 'active' to ="/thursday"> Thursday</NavLink>
+                        <NavLink  to ="/thursday"> Thursday</NavLink>
                     </div>
                     <div className={s.item}>
-                        <NavLink activeClassName= 'active' to = "/friday"> Friday</NavLink>
+                        <NavLink to = "/friday"> Friday</NavLink>
                     </div>
                     <div className={s.item}>
-                        <NavLink activeClassName= 'active' to = "/saturday"> Saturday</NavLink>
+                        <NavLink to = "/saturday"> Saturday</NavLink>
                     </div>
                     <div className={s.item}>
-                        <NavLink activeClassName= 'active' to ="/sunday"> Sunday </NavLink>
+                        <NavLink to ="/sunday"> Sunday </NavLink>
                     </div>
                 </div>}
 

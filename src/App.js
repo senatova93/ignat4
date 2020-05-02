@@ -30,8 +30,8 @@ class App extends React.Component {
                     <Navbar/>
                     <div className="app-wrapper-content">
 
-                        <Route path = '/monday' render={(props) => <Monday  addName={this.addName}  names={this.state.names}/>}></Route>
-                        <Route path = '/tuesday' component={Tuesday}></Route>
+                        <Route path = '/monday' render={(props) => <Monday  addName={this.addName}  names={this.state.names}/>}/>
+                        <Route path = '/tuesday' render = { () => <Tuesday/> }/>
 
                     </div>
 
