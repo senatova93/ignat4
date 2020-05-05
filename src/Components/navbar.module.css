@@ -6,13 +6,21 @@ a {
     color: #585858;
 }
 .nav {
-    transition: 10s;
+
+    position: absolute;
+
 }
 .item {
     height: 30px;
     font-style: italic;
+    opacity: 1;
+    transition: 1s;
 
 }
+
+
+
+
 
 .menuIcon{
     margin: 30px;
@@ -20,6 +28,7 @@ a {
     width: 30px;
     height: 5px;
     background-color: #939393;
+    opacity: 1;
 }
 .menuIcon::before {
     position: absolute;
@@ -31,9 +40,11 @@ a {
     height: 5px;
     background-color: #6f6f6f;
     transition:  transform 0.1s ease-in, top 0.1s linear 0.1s;
-
-
 }
+
+
+
+
 .menuIcon::after {
     position: absolute;
     left: 0px;

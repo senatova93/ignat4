@@ -21,7 +21,7 @@ class Navbar extends React.Component {
         })
     }
 
-    render = () => {
+        render = () => {
 
         let classForMenu1 = this.state.isMenu ? s.menuIconActive + ' ' + s.menuIcon : s.menuIcon ;
 
