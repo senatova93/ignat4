@@ -1,5 +1,5 @@
 import React from 'react';
-
+import s from './tuesday.module.css';
 class TodoListTask extends React.Component {
     state = {
         isEditMode: false
@@ -33,7 +33,7 @@ class TodoListTask extends React.Component {
                        checked={this.props.task.isDone}
                        onChange={this.onIsDoneChanged}/>
                 {this.state.isEditMode
-                    ? <input value={this.props.task.title}
+                    ? <input className={s.smallInput} value={this.props.task.title}
                              autoFocus={true}
                              onBlur={this.deactivatedEditMode}
                              onChange={this.onIsTitleChanged}/>

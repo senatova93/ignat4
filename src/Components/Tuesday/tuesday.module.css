@@ -69,7 +69,12 @@ text-align: center}
     align-items: center;
     justify-content: center;
 }
+.smallInput {
+    width: 50px;
+    height: 15px;
 
+
+}
 
 
 
