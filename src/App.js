@@ -10,21 +10,33 @@ class App extends React.Component {
     state = {
         names: [{title: "Markusha"}],
         tasks: [
-            {id: 0, title: "JS", isDone: true, priority: "high"},
-            {id: 1, title: "Angular", isDone: false, priority: "middle"},
-            {id: 2, title: "HTML", isDone: true, priority: "low"},
-            {id: 3, title: "CSS", isDone: true, priority: "low"},
-            {id: 4, title: "Java", isDone: false, priority: "low"},
-            {id: 5, title: "React", isDone: false, priority: "high"}
+            // {id: 0, title: "JS", isDone: true, priority: "high"},
+            // {id: 1, title: "Angular", isDone: false, priority: "middle"},
+            // {id: 2, title: "HTML", isDone: true, priority: "low"},
+            // {id: 3, title: "CSS", isDone: true, priority: "low"},
+            // {id: 4, title: "Java", isDone: false, priority: "low"},
+            // {id: 5, title: "React", isDone: false, priority: "high"}
         ],
         filterValue: "All"
-    }
-    nextTaskId = 6;
 
-    // saveState = () => {
-    //     let stateAsString = JSON.stringify(this.state);
-    //     localStorage.setItem("state", stateAsString)}
-    //
+    }
+    nextTaskId = 1;
+
+    componentDidMount = () => { this.restoreState()
+    }
+
+    saveState = () => {
+        let stateAsString = JSON.stringify(this.state)
+        localStorage.setItem('state', stateAsString)
+    }
+    restoreState = () => {
+        let stateAsString = localStorage.getItem('state')
+        if (stateAsString) {
+        let state = JSON.parse(stateAsString)
+        this.setState(state)
+    }}
+
+
     // restoreState = () => {
     //     let state = {
     //         tasks: [],
@@ -56,7 +68,12 @@ class App extends React.Component {
         };
         this.nextTaskId++
         let newTasks = [...this.state.tasks, newTask]
-        this.setState({tasks: newTasks}, this.saveState)
+        this.setState({
+            tasks: newTasks}
+            , () => {this.saveState()
+
+            })
+
     }
     changeFilter = (newFilterValue) => {
         this.setState({filterValue: newFilterValue})
@@ -74,16 +91,16 @@ class App extends React.Component {
 
     changeStatus = (status, taskId) => {
         let obj = {
-            isDone:status
+            isDone: status
         }
         this.changeTask(taskId, obj)
     }
 
     changeTitle = (taskId, title) => {
         let oj = {
-            title:title
+            title: title
         }
-        this.changeTask(taskId,title)
+        this.changeTask(taskId, title)
     }
 
     addName = (newText) => {
