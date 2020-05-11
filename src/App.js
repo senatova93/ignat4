@@ -45,40 +45,40 @@ class App extends React.Component {
     //     this.restoreState()
     // }
     //
-    //
-    // addTask = (newText) => {
-    //
-    //     let newTask = {
-    //         title: newText,
-    //         isDone: true,
-    //         priority: "low",
-    //         id: this.nextTaskId
-    //     };
-    //     this.nextTaskId++
-    //     let newTasks = [...this.state.tasks, newTask]
-    //     this.setState({tasks: newTasks}, this.saveState)
-    // }
-    // changeFilter = (newFilterValue) => {
-    //     this.setState({filterValue: newFilterValue})
-    // }
-    // changeTask = (taskId, obj) => {
-    //     let tasksCopy = this.state.tasks.map(t => {
-    //         if (t.id === taskId) {
-    //             return {...t, ...obj}
-    //         }
-    //         return t
-    //     });
-    //     this.setState(
-    //         {tasks: tasksCopy}, this.saveState)}
-    //
-    //
-    // changeStatus = (taskId, isDone) => {
-    //     this.changeTask(taskId, {isDone: isDone})
-    // }
-    //
-    // changeTitle = (taskId, title) => {
-    //     this.changeTask(taskId, {title: title})
-    // }
+
+    addTask = (newText) => {
+
+        let newTask = {
+            title: newText,
+            isDone: true,
+            priority: "low",
+            id: this.nextTaskId
+        };
+        this.nextTaskId++
+        let newTasks = [...this.state.tasks, newTask]
+        this.setState({tasks: newTasks}, this.saveState)
+    }
+    changeFilter = (newFilterValue) => {
+        this.setState({filterValue: newFilterValue})
+    }
+    changeTask = (taskId, obj) => {
+        let tasksCopy = this.state.tasks.map(t => {
+            if (t.id === taskId) {
+                return {...t, ...obj}
+            }
+            return t
+        });
+        this.setState(
+            {tasks: tasksCopy}, this.saveState)}
+
+
+    changeStatus = (taskId, isDone) => {
+        this.changeTask(taskId, {isDone: isDone})
+    }
+
+    changeTitle = (taskId, title) => {
+        this.changeTask(taskId, {title: title})
+    }
 
 
     addName = (newText) => {
@@ -101,19 +101,20 @@ class App extends React.Component {
 
                         <Route path='/monday'
                                render={(props) => <Monday addName={this.addName} names={this.state.names}/>}/>
-                        <Route path='/tuesday' render={(props) => <Tuesday addTask={this.addTask}
-                                                                           changeFilter={this.changeFilter}
-                                                                           filterValue={this.state.filterValue}
-                                                                           changeTitle={this.changeTitle}
-                                                                           changeStatus={this.changeStatus}
-                                                                           tasks={this.state.tasks.filter((tasks) => {
-                                                                               switch (this.state.filterValue) {
-                                                                                   case "All":
-                                                                                       return true;
-                                                                                   case "Completed":
-                                                                                       return tasks.isDone;
-                                                                                   case "Active":
-                                                                                       return !tasks.isDone;
+                        <Route path='/tuesday'
+                               render={(props) => <Tuesday addTask={this.addTask}
+                                                           changeFilter={this.changeFilter}
+                                                           filterValue={this.state.filterValue}
+                                                           changeTitle={this.changeTitle}
+                                                           changeStatus={this.changeStatus}
+                                                           tasks={this.state.tasks.filter((tasks) => {
+                                                               switch (this.state.filterValue) {
+                                                                   case "All":
+                                                                       return true;
+                                                                       case "Completed":
+                                                                           return tasks.isDone;
+                                                                           case "Active":
+                                                                               return !tasks.isDone;
                                                                                    default:
                                                                                        return true
                                                                                }
