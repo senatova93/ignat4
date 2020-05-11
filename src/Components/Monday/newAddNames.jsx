@@ -16,9 +16,9 @@ class NewAddNames extends React.Component {
 
 
         return (
-            <div className= {s.names}>
+            <div className={s.names}>
                 <div className={s.name}>
-                {namesElements}
+                    {namesElements}
 
                 </div>
             </div>

@@ -19,7 +19,7 @@ class App extends React.Component {
         ],
         filterValue: "All"
     }
-    nextTaskId = "";
+    nextTaskId = 6;
 
     // saveState = () => {
     //     let stateAsString = JSON.stringify(this.state);
@@ -69,11 +69,21 @@ class App extends React.Component {
             return t
         });
         this.setState(
-            {tasks: tasksCopy}, this.saveState)}
+            {tasks: tasksCopy}, this.saveState)
+    }
 
 
-    changeStatus = (taskId, isDone) => {
-        this.changeTask(taskId, {isDone: isDone})
+    changeStatus = (status, taskId) => {
+        let tasksCopy = this.state.tasks.map (t => {
+            if (t.id == taskId) {
+                return {...t, isDone: status}
+            }
+            return t;
+        })
+        this.setState ({
+            tasks:tasksCopy
+        })
+
     }
 
     changeTitle = (taskId, title) => {
@@ -111,19 +121,19 @@ class App extends React.Component {
                                                                switch (this.state.filterValue) {
                                                                    case "All":
                                                                        return true;
-                                                                       case "Completed":
-                                                                           return tasks.isDone;
-                                                                           case "Active":
-                                                                               return !tasks.isDone;
-                                                                                   default:
-                                                                                       return true
-                                                                               }
+                                                                   case "Completed":
+                                                                       return tasks.isDone;
+                                                                   case "Active":
+                                                                       return !tasks.isDone;
+                                                                   default:
+                                                                       return true
+                                                               }
 
 
-                                                                           })}
+                                                           })}
 
 
-                        />}/>
+                               />}/>
 
                     </div>
 

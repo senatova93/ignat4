@@ -3,20 +3,24 @@ import React from 'react';
 class TodoListTask extends React.Component {
     state = {
         isEditMode: false
-    }
+    };
     activatedEditMode = () => {
         this.setState({isEditMode: true})
     };
-    deactivetedEditMode = () => {
+    deactivatedEditMode = () => {
         this.setState({isEditMode: false})
-    }
+    };
     onIsDoneChanged = (e) => {
-        this.props.changeStatus(e.currentTarget.checked, this.props.task)
+        this.props.changeStatus(e.currentTarget.checked, this.props.task.id)
     }
-    onIsTitleChanged = (e) => {
-        this.props.changeTitle(this.props.task.id, e.currentTarget.value )
-    }
+    // onDeleteTask = (e) => {
+    //     this.props.task (e.currentTarget.value, this.props.task.id)
+    //
+    // }
 
+    onIsTitleChanged = (e) => {
+        this.props.changeTitle(this.props.task.id, e.currentTarget.value)
+    }
 
 
     render = (props) => {
@@ -31,8 +35,8 @@ class TodoListTask extends React.Component {
                 {this.state.isEditMode
                     ? <input value={this.props.task.title}
                              autoFocus={true}
-                             onBlur={this.deactivetedEditMode}
-                            onChange = {this.onIsTitleChanged}/>
+                             onBlur={this.deactivatedEditMode}
+                             onChange={this.onIsTitleChanged}/>
                     : <span onClick={this.activatedEditMode}>{this.props.task.id}:{this.props.task.title}</span>
                 }
 

@@ -5,32 +5,33 @@ import s from './monday.module.css'
 class Header extends React.Component {
     state = {
         error: false,
-        title:""
+        title: ""
     }
-    onKeyPress =  (e) => {
+    onKeyPress = (e) => {
         if (e.key === "Enter") {
-            this.onAddNameButtonClick()}
+            this.onAddNameButtonClick()
+        }
     }
     onTitleChanged = (e) => {
-        this.setState({title:e.currentTarget.value})
+        this.setState({title: e.currentTarget.value})
     }
-
-
 
 
     onAddNameButtonClick = () => {
 
         let newText = this.state.title
         this.state.title = ""
-        if (newText !==""){
-        this.props.addName(newText)
-            this.setState( {error:false, title: ""})}
-        else { this.setState( {error:true})}
+        if (newText !== "") {
+            this.props.addName(newText)
+            this.setState({error: false, title: ""})
+        } else {
+            this.setState({error: true})
+        }
 
     }
 
     render = () => {
-const inputClass = this.state.error ? "error" : ""
+        const inputClass = this.state.error ? "error" : ""
 
 
         return (
@@ -39,11 +40,11 @@ const inputClass = this.state.error ? "error" : ""
 
                 <h3 className={s.TuesdayHeaderTitle}>All users names</h3>
                 <div className="todoList-newTaskForm">
-                    <input value = {this.state.title}
-                           onChange = {this.onTitleChanged}
+                    <input value={this.state.title}
+                           onChange={this.onTitleChanged}
                            onKeyPress={this.onKeyPress}
-                           className= {inputClass} type="text" placeholder= "New users name"/>
-                    <button className="button" onClick={this.onAddNameButtonClick}>Add </button>
+                           className={inputClass} type="text" placeholder="New users name"/>
+                    <button className="button" onClick={this.onAddNameButtonClick}>Add</button>
                 </div>
             </div>
 

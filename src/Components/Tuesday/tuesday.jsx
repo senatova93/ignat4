@@ -7,7 +7,7 @@ import TodoListFooter from "./TodoListFooter";
 const Tuesday = (props) => {
 
     return <div className={s.tuesday}>
-        <h3 className={s.headerTitle}>All users names</h3>
+        <h3 className={s.headerTitle}></h3>
         <TodoListHeader addTask={props.addTask}/>
         <TodoListTasks
 
