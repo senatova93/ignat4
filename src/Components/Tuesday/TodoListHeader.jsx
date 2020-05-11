@@ -1,5 +1,5 @@
 import React from 'react';
-
+import s from './tuesday.module.css';
 
 
 class TodoListHeader extends React.Component {
@@ -32,10 +32,10 @@ onTitleChanged = (e) => {
         const inputClassName = this.state.error ? "error": ""
         return (
             <div className="TodoListHeader">
-                <div className="todoList">
+                <div className= {s.todoList}>
 
-                    <h3 className="todoList-header__title">What to Learn</h3>
-                    <div className="todoList-newTaskForm">
+                    <h3 className= {s.TuesdayHeaderTitle}>What to Learn</h3>
+                    <div className={s.todoListNewTaskForm}>
                         <input value= {this.state.title}
                                onChange={this.onTitleChanged}
                                onKeyPress = {this.onKeyPress}

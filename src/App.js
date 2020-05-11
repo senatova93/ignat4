@@ -19,7 +19,7 @@ class App extends React.Component {
         ],
         filterValue: "All"
     }
-    nextTaskId = 0;
+    nextTaskId = "";
 
     // saveState = () => {
     //     let stateAsString = JSON.stringify(this.state);

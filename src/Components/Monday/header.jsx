@@ -37,7 +37,7 @@ const inputClass = this.state.error ? "error" : ""
 
             <div className={s.header}>
 
-                <h3 className={s.headerTitle}>All users names</h3>
+                <h3 className={s.TuesdayHeaderTitle}>All users names</h3>
                 <div className="todoList-newTaskForm">
                     <input value = {this.state.title}
                            onChange = {this.onTitleChanged}
