@@ -1,0 +1,367 @@
+.monday {display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+justify-content: center}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 5px solid #939393;
+    border-radius: 20px;
+    background-color: #f9ff33;
+    height:100px;
+    width: 250px;
+}
+
+
+.headerTitle {
+    text-align: center;
+    font-style: italic;
+    color: #636363;
+
+}
+input {
+    background-color: #ececec;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    margin: 2px;
+    font-style: italic;
+    height: 25px;
+}
+button {
+    border-radius: 10px;
+    background-color: #ececec;
+    font-style: italic;
+    font-weight: bold;
+    color: #282c34 ;
+}
+
+.names {align-self: center;
+       font-style: italic;
+        width: 250px;
+        background-color: #f9ff33;
+        border-radius: 10px;
+        font-weight: bold;
+        border: #939393 1px solid;
+         transition:0.7s;
+}
+.name { height: 30px;
+text-align: center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './navbar.module.css';
+import s from './tuesday.module.css';
 
 const Tuesday = () => {
-    return <div>
+    return <div className = {s.tuesday}>
         Tuesday
     </div>
 
