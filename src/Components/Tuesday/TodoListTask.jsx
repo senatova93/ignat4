@@ -19,7 +19,7 @@ class TodoListTask extends React.Component {
 
 
 
-    render = () => {
+    render = (props) => {
         const taskClassName = this.props.task.isDone
             ? "todoList-task done "
             : "todoList-task"
