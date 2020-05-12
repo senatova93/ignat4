@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from "./Components/NavBar/navbar";
 import Monday from "./Components/Monday/monday";
 import Tuesday from "./Components/Tuesday/tuesday";
+import saveState from './Func'
+import restoreState from './Func'
 
 import {BrowserRouter, Route} from "react-router-dom";
 
