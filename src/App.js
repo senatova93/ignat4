@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from "./Components/NavBar/navbar";
 import Monday from "./Components/Monday/monday";
 import Tuesday from "./Components/Tuesday/tuesday";
-import saveState from './Func'
-import restoreState from './Func'
+import {saveState, restoreState} from './Func'
+
 
 import {BrowserRouter, Route} from "react-router-dom";
 
@@ -24,19 +24,21 @@ class App extends React.Component {
     }
     nextTaskId = 1;
 
-    componentDidMount = () => { this.restoreState()
+    componentDidMount = () => {
+        let newState = restoreState('state', this.state)
+        this.setState(newState)
     }
 
     saveState = () => {
-        let stateAsString = JSON.stringify(this.state)
-        localStorage.setItem('state', stateAsString)
+        saveState('state', this.state)
     }
-    restoreState = () => {
-        let stateAsString = localStorage.getItem('state')
-        if (stateAsString) {
-        let state = JSON.parse(stateAsString)
-        this.setState(state)
-    }}
+
+    // restoreState = () => {
+    //     let stateAsString = localStorage.getItem('state')
+    //     if (stateAsString) {
+    //     let state = JSON.parse(stateAsString)
+    //     this.setState(state)
+    // }}
 
 
     // restoreState = () => {
