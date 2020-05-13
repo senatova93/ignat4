@@ -21,6 +21,17 @@ justify-content: center}
     color: #636363;
 
 }
+
+input[type=checkbox] {
+    background-color: #ececec;
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+    margin: 2px;
+    font-style: italic;
+    height: 25px;
+}
+
 input {
     background-color: #ececec;
     border-radius: 10px;

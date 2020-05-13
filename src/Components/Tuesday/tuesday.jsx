@@ -11,6 +11,7 @@ const Tuesday = (props) => {
         <TodoListHeader addTask={props.addTask}/>
         <TodoListTasks
 
+
             changeTitle={props.changeTitle}
             changeStatus={props.changeStatus}
             tasks={props.tasks.filter((tasks) => {

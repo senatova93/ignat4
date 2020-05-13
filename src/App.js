@@ -33,34 +33,7 @@ class App extends React.Component {
         saveState('state', this.state)
     }
 
-    // restoreState = () => {
-    //     let stateAsString = localStorage.getItem('state')
-    //     if (stateAsString) {
-    //     let state = JSON.parse(stateAsString)
-    //     this.setState(state)
-    // }}
 
-
-    // restoreState = () => {
-    //     let state = {
-    //         tasks: [],
-    //         filterValue: "All"
-    //     }
-    //     let stateAsString = localStorage.getItem("state");
-    //     if (stateAsString) {
-    //         state = JSON.parse(stateAsString);
-    //     }
-    //     this.setState(state, () => {this.state.tasks.forEach(t =>{
-    //         if(t.id >= this.nextTaskId){
-    //             this.nextTaskId= t.id + 1
-    //         }
-    //     })
-    //     });
-    // }
-    // componentDidMount() {
-    //     this.restoreState()
-    // }
-    //
 
     addTask = (newText) => {
 
