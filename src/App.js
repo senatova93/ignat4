@@ -12,14 +12,15 @@ class App extends React.Component {
     state = {
         names: [{title: "Markusha"}],
         tasks: [
-            // {id: 0, title: "JS", isDone: true, priority: "high"},
-            // {id: 1, title: "Angular", isDone: false, priority: "middle"},
-            // {id: 2, title: "HTML", isDone: true, priority: "low"},
-            // {id: 3, title: "CSS", isDone: true, priority: "low"},
-            // {id: 4, title: "Java", isDone: false, priority: "low"},
-            // {id: 5, title: "React", isDone: false, priority: "high"}
+            {id: 0, title: "JS", isDone: true, priority: "high"},
+            {id: 1, title: "Angular", isDone: false, priority: "middle"},
+            {id: 2, title: "HTML", isDone: true, priority: "low"},
+            {id: 3, title: "CSS", isDone: true, priority: "low"},
+            {id: 4, title: "Java", isDone: false, priority: "low"},
+            {id: 5, title: "React", isDone: false, priority: "high"}
         ],
-        filterValue: "All"
+        filterValue: "All",
+        loading: true
 
     }
     nextTaskId = 1;
@@ -27,11 +28,27 @@ class App extends React.Component {
     componentDidMount = () => {
         let newState = restoreState('state', this.state)
         this.setState(newState)
+
     }
 
     saveState = () => {
         saveState('state', this.state)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,7 +106,13 @@ class App extends React.Component {
         })
 
     }
+    deleteTask = (taskId) => {
 
+        let newTasks = this.state.tasks.filter(t => t.id !== taskId)
+        debugger
+        this.setState({tasks: newTasks
+        }, () => {this.saveState()})
+    }
 
     render = () => {
         return (
@@ -102,6 +125,7 @@ class App extends React.Component {
                                render={(props) => <Monday addName={this.addName} names={this.state.names}/>}/>
                         <Route path='/tuesday'
                                render={(props) => <Tuesday addTask={this.addTask}
+                                                           deleteTask={this.deleteTask}
                                                            changeFilter={this.changeFilter}
                                                            filterValue={this.state.filterValue}
                                                            changeTitle={this.changeTitle}

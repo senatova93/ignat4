@@ -30,6 +30,21 @@ class TodoListHeader extends React.Component {
         }
         ;
     }
+
+    onDeleteTaskButtonClick = (taskId) => {
+                    let newDeleteTask = this.state.tasks.filter(t => t.id !== taskId)
+
+                            this.setState({tasks: newDeleteTask
+                                }, () => {this.saveState()})
+        }
+
+
+
+
+
+
+
+
     render = () => {
         const inputClassName = this.state.error ? "error" : ""
         return (
@@ -51,8 +66,8 @@ class TodoListHeader extends React.Component {
             </div>
 
         );
-    }
-}
+    }}
+
 
 export default TodoListHeader;
 

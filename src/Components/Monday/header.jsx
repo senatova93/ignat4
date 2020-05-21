@@ -29,6 +29,19 @@ class Header extends React.Component {
         }
 
     }
+    onAddNameButtonClick = () => {
+
+        let newText = this.state.title
+        this.state.title = ""
+        if (newText !== "") {
+            this.props.addName(newText)
+            this.setState({error: false, title: ""})
+        } else {
+            this.setState({error: true})
+        }
+
+    }
+
 
     render = () => {
         const inputClass = this.state.error ? "error" : ""
@@ -44,7 +57,8 @@ class Header extends React.Component {
                            onChange={this.onTitleChanged}
                            onKeyPress={this.onKeyPress}
                            className={inputClass} type="text" placeholder="New users name"/>
-                    <button className="button" onClick={this.onAddNameButtonClick}>Add</button>
+                           <button className="button" onClick={this.onAddNameButtonClick}>Add</button>
+
                 </div>
             </div>
 
